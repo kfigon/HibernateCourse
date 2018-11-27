@@ -19,4 +19,10 @@ public class BookJdbcDao {
     public List<BookJdbc> findAll() {
         return jdbcTemplate.query("select * from book", new BeanPropertyRowMapper<>(BookJdbc.class));
     }
+
+    public BookJdbc findById(Integer id) {
+        return jdbcTemplate.queryForObject("select * from book where id=?",
+                new Object[]{id},
+                new BeanPropertyRowMapper<>(BookJdbc.class));
+    }
 }
