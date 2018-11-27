@@ -30,4 +30,12 @@ public class CourseRepository {
     public void update(Course course) {
         entityManager.merge(course);
     }
+
+    // mamy transakcje, wiec sie zmieni - pojdize update.
+    // po wyjsciu z tego jest SDADASDSA
+    public void asd() {
+        Course c = Course.builder().name("ASD").build();
+        entityManager.persist(c);
+        c.setName("SDADSASD");
+    }
 }
