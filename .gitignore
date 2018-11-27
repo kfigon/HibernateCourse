@@ -10,3 +10,15 @@
 /_1_basicApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /_1_basicApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /_1_basicApp/target/classes
+/_2_jpa/target/_2_jpa-0.0.1-SNAPSHOT.jar
+/_2_jpa/target/_2_jpa-0.0.1-SNAPSHOT.jar.original
+/_2_jpa/target/classes/application.properties
+/_2_jpa/target/classes/data.sql
+/_2_jpa/target/classes/mypackage/Main.class
+/_2_jpa/target/classes/mypackage/jpa/BookJpa.class
+/_2_jpa/target/classes/mypackage/jpa/BookJpaController.class
+/_2_jpa/target/classes/mypackage/jpa/BookJpaRepository.class
+/_2_jpa/target/maven-archiver/pom.properties
+/_2_jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/_2_jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/_2_jpa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
