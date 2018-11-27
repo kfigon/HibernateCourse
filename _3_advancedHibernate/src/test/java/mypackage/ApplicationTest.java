@@ -1,7 +1,7 @@
 package mypackage;
 
 import mypackage.models.Course;
-import mypackage.models.CourseRepository;
+import mypackage.services.CourseRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

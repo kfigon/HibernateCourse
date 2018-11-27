@@ -1,5 +1,6 @@
-package mypackage.models;
+package mypackage.services;
 
+import mypackage.models.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

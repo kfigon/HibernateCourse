@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 @Getter
@@ -20,6 +21,7 @@ public class Course {
     @GeneratedValue
     private Long id;
 
+    @Size(max = 32)
     private String name;
 
 }

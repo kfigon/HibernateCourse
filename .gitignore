@@ -33,3 +33,4 @@
 /_3_advancedHibernate/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /_3_advancedHibernate/target/surefire-reports/TEST-mypackage.ApplicationTest.xml
 /_3_advancedHibernate/target/surefire-reports/mypackage.ApplicationTest.txt
+/_3_advancedHibernate/target/classes/mypackage/services/*.class
