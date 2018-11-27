@@ -15,9 +15,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Course {
+
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
 
     private String name;
 
