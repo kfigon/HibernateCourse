@@ -22,3 +22,6 @@
 /_2_jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 /_2_jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /_2_jpa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/_3_advancedHibernate/target/classes/mypackage/*.class
+/_3_advancedHibernate/target/classes/mypackage/models/*.class
+/_3_advancedHibernate/target/test-classes/mypackage/*.class
