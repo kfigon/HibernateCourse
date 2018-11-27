@@ -9,5 +9,7 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-//    w intellij mozna polaczyc sie z h2 konsola
+//    mozna polaczyc sie z konsola
+    // localhost:8080/h2-console
+//    trzeba urla wpisac jdbc:h2:mem:testdb
 }
