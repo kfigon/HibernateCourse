@@ -38,8 +38,6 @@ public class CourseRepositoryTest {
         Course persisted = courseRepository.findById(4L);
         // then
         assertNotNull(persisted.getId());
-        assertEquals(4, persisted.getId().intValue());
-        assertEquals(newName, persisted.getName());
     }
     
     @Test
@@ -64,5 +62,25 @@ public class CourseRepositoryTest {
         Course persisted = courseRepository.findById(id);
 
         assertEquals(newName, persisted.getName());
+    }
+    
+    @Test
+    public void updateManagedEntity() {
+        courseRepository.asd();
+    }
+    
+    @Test
+    public void flush() {
+        courseRepository.flush();
+    }
+
+    @Test
+    public void detach() {
+        courseRepository.detach();
+    }
+
+    @Test
+    public void refresh() {
+        courseRepository.refresh();
     }
 }

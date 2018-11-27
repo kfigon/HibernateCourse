@@ -38,4 +38,26 @@ public class CourseRepository {
         entityManager.persist(c);
         c.setName("SDADSASD");
     }
+
+    public void flush() {
+        Course c = Course.builder().name("ASD").build();
+        entityManager.persist(c);
+        entityManager.flush(); // od razu do bazy, bez kesza
+        c.setName("SDADSASD");
+    }
+
+    public void detach() {
+        Course c = Course.builder().name("ASD").build();
+        entityManager.persist(c);
+        entityManager.detach(c);
+//        clear - detach wszystkiego w transakcji
+        c.setName("SDADSASD"); // tej zmiany nie bedzie
+    }
+
+    public void refresh() {
+//  odswieza encje - czyta najswiezsze dane z bazy, odrzuca
+// zmiany ktore w trakcie zaszly
+        Course course = findById(1L);
+        entityManager.refresh(course);
+    }
 }
