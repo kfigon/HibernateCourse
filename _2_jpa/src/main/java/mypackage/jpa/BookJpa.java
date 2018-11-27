@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +17,7 @@ import javax.persistence.Table;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedQuery(name = "find_all_books", query = "from BookJpa")
 public class BookJpa {
 
     @Id // java persistance, nie spring.data.annotation!!!!

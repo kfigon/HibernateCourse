@@ -5,7 +5,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -16,7 +15,21 @@ public class BookJpaRepository {
     private EntityManager entityManager;
 
     public List<BookJpa> getAll() {
-        return new ArrayList<>();
+//        HQL
+        return entityManager.createQuery("from BookJpa").getResultList();
+    }
+
+    public List<BookJpa> getAllNamedQuery() {
+        // adnotacja named query na encji. HQL
+        return entityManager.createNamedQuery("find_all_books").getResultList();
+    }
+
+    public BookJpa update(BookJpa bookJpa) {
+        return entityManager.merge(bookJpa); // update/insert - MERGE. sprawdzi czy jest id i bedzie update/create
+    }
+
+    public BookJpa insert(BookJpa bookJpa) {
+        return entityManager.merge(bookJpa); // update/insert - MERGE. sprawdzi czy jest id i bedzie update/create
     }
 
     public BookJpa findById(Integer id) {

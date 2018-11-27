@@ -20,6 +20,11 @@ public class BookJpaController {
         return bookJpaRepository.getAll();
     }
 
+    @GetMapping("/booksx")
+    public List<BookJpa> getAllx() {
+        return bookJpaRepository.getAllNamedQuery();
+    }
+
     @GetMapping("/{id}")
     public BookJpa findById(@PathVariable Integer id) {
         return bookJpaRepository.findById(id);
