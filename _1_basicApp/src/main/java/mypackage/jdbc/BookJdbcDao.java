@@ -9,10 +9,14 @@ import java.util.List;
 
 
 // spring jdbc - nie ma adnotacji @entity nawet
+// w JDBC piszemy query zawsze, potem mapping
+
+// legacy jdbc jest trudniejsze, trzeba pilnowac polaczenia, transakcji, recznie mapowac itd.
 
 @Repository
 public class BookJdbcDao {
 
+    // to laczy sie z baza
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

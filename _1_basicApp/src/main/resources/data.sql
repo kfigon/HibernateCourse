@@ -1,3 +1,4 @@
+-- jpa nie wymaga tworzenia tego, jdbc tak
 CREATE TABLE book(
   id integer not null,
   author varchar(30),
