@@ -17,7 +17,8 @@ public class BookJdbcDao {
     private JdbcTemplate jdbcTemplate;
 
     public List<BookJdbc> findAll() {
-        return jdbcTemplate.query("select * from book", new BeanPropertyRowMapper<>(BookJdbc.class));
+        return jdbcTemplate.query("select * from book",
+                new BeanPropertyRowMapper<>(BookJdbc.class)); // mozna robic customowe mappery (jesli np. nazwy kolumn sa inne)
     }
 
     public BookJdbc findById(Integer id) {
