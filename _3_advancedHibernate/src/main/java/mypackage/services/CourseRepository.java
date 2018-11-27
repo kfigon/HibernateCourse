@@ -18,9 +18,8 @@ public class CourseRepository {
         return entityManager.find(Course.class, id);
     }
 
-    public Course create(Course course) {
+    public void create(Course course) {
         entityManager.persist(course);
-        return course;
     }
 
     public void delete(Long id) {

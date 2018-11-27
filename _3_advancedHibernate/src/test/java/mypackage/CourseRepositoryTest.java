@@ -34,7 +34,8 @@ public class CourseRepositoryTest {
         String newName = "some  funny name";
         Course course = Course.builder().name(newName).build();
         // when
-        Course persisted = courseRepository.create(course);
+        courseRepository.create(course);
+        Course persisted = courseRepository.findById(4L);
         // then
         assertNotNull(persisted.getId());
         assertEquals(4, persisted.getId().intValue());
@@ -44,10 +45,7 @@ public class CourseRepositoryTest {
     @Test
     public void deleteNewCourse() {
         // given
-        String newName = "strange stuff";
-        Course course = Course.builder().name(newName).build();
-        Course persisted = courseRepository.create(course);
-        Long id = persisted.getId();
+        Long id = 2L;
         // when
         courseRepository.delete(id);
 
