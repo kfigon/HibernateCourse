@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-// old jdbc - nie ma adnotacji @entity nawet
+// spring jdbc - nie ma adnotacji @entity nawet
 
 @Repository
 public class BookJdbcDao {
