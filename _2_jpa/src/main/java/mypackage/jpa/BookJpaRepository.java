@@ -25,11 +25,11 @@ public class BookJpaRepository {
     }
 
     public BookJpa update(BookJpa bookJpa) {
-        return entityManager.merge(bookJpa); // update/insert - MERGE. sprawdzi czy jest id i bedzie update/create
+        return entityManager.merge(bookJpa); // update/insert - MERGE. sprawdzi czy jest id i bedzie update/create. Ale lepiej uzywac oddzielnie
     }
 
-    public BookJpa insert(BookJpa bookJpa) {
-        return entityManager.merge(bookJpa); // update/insert - MERGE. sprawdzi czy jest id i bedzie update/create
+    public void insert(BookJpa bookJpa) {
+        entityManager.persist(bookJpa);
     }
 
     public BookJpa findById(Integer id) {

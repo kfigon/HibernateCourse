@@ -34,3 +34,5 @@
 /_3_advancedHibernate/target/surefire-reports/TEST-mypackage.ApplicationTest.xml
 /_3_advancedHibernate/target/surefire-reports/mypackage.ApplicationTest.txt
 /_3_advancedHibernate/target/classes/mypackage/services/*.class
+/_3_advancedHibernate/target/surefire-reports/TEST-mypackage.CourseRepositoryTest.xml
+/_3_advancedHibernate/target/surefire-reports/mypackage.CourseRepositoryTest.txt
