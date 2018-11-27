@@ -13,7 +13,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=Main.class)
+@SpringBootTest
 public class CourseRepositoryTest {
 
     @Autowired

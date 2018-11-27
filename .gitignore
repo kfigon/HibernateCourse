@@ -36,3 +36,7 @@
 /_3_advancedHibernate/target/classes/mypackage/services/*.class
 /_3_advancedHibernate/target/surefire-reports/TEST-mypackage.CourseRepositoryTest.xml
 /_3_advancedHibernate/target/surefire-reports/mypackage.CourseRepositoryTest.txt
+/_3_advancedHibernate/target/_3_advancedHibernate-0.0.1-SNAPSHOT.jar
+/_3_advancedHibernate/target/_3_advancedHibernate-0.0.1-SNAPSHOT.jar.original
+/_3_advancedHibernate/target/maven-archiver/pom.properties
+/_3_advancedHibernate/target/surefire-reports/2018-11-27T16-35-16_630-jvmRun1.dump
