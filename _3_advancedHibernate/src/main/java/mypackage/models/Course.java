@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -18,6 +19,12 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+//@Table gdy inna nazwa tabeli, pamietac o underscore w tabeli vs camelcase w javie
+@NamedQuery(name="get_all", query = "select c from Course c")
+
+//@NamedQueries(value={
+//@NamedQuery(),//@NamedQuery(),
+//})
 public class Course {
 
     @Id
@@ -27,4 +34,6 @@ public class Course {
     @Size(max = 32)
     private String name;
 
+//    @UpdateTimestamp, @CreateTimestamp - hibernate automagicznie sam uzupelni timestampy
+//    private LocalDateTtime lastUpdateTime
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -33,7 +34,7 @@ public class CourseRepository {
 
     // mamy transakcje, wiec sie zmieni - pojdize update.
     // po wyjsciu z tego jest SDADASDSA
-    public void asd() {
+    public void updateManagedEntity() {
         Course c = Course.builder().name("ASD").build();
         entityManager.persist(c);
         c.setName("SDADSASD");
@@ -59,5 +60,18 @@ public class CourseRepository {
 // zmiany ktore w trakcie zaszly
         Course course = findById(1L);
         entityManager.refresh(course);
+    }
+
+    public List<Course> query() {
+        return entityManager.createQuery(
+                "Select c from Course c " +
+                "where c.name=:name", Course.class) // ten parametr opcjonalny, typed query
+                .setParameter("name", "praktyka programowania")
+                .getResultList();
+    }
+
+    public List<Course> namedQuery() {
+        return entityManager.createNamedQuery("get_all", Course.class)
+                .getResultList();
     }
 }
