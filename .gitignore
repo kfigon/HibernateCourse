@@ -40,3 +40,4 @@
 /_3_advancedHibernate/target/_3_advancedHibernate-0.0.1-SNAPSHOT.jar.original
 /_3_advancedHibernate/target/maven-archiver/pom.properties
 /_3_advancedHibernate/target/surefire-reports/2018-11-27T16-35-16_630-jvmRun1.dump
+/_3_advancedHibernate/target/test-classes/mypackage/services/*.class

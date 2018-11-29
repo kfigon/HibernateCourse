@@ -1,4 +1,4 @@
-package mypackage;
+package mypackage.services;
 
 import mypackage.models.Course;
 import mypackage.services.CourseRepository;
