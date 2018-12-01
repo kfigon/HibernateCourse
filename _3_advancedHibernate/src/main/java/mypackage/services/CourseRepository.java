@@ -33,7 +33,8 @@ public class CourseRepository {
     }
 
     // mamy transakcje, wiec sie zmieni - pojdize update.
-    // po wyjsciu z tego jest SDADASDSA
+    // po wyjsciu z tego jest SDADASDSA.
+    // persistance context trzyma wsystko od poczatku metody do konca
     public void updateManagedEntity() {
         Course c = Course.builder().name("ASD").build();
         entityManager.persist(c);

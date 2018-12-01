@@ -21,4 +21,15 @@ public class StudentRepositoryTest {
         Student student = studentRepository.findById(1L);
         assertEquals("Adam", student.getName());
     }
+
+    @Test
+    public void update() {
+        Student student = new Student();
+        student.setName("Zdzislaw");
+        student.setId(1L);
+        studentRepository.update(student);
+
+        Student updatedStudent = studentRepository.findById(1L);
+        assertEquals("Zdzislaw", updatedStudent.getName());
+    }
 }
