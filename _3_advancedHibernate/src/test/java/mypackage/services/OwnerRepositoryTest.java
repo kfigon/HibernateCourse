@@ -21,7 +21,7 @@ public class OwnerRepositoryTest {
     public void findById() {
         Owner owner = ownerRepository.findById(1L);
         assertEquals("Jan", owner.getName());
-        assertNull(owner.getDog()); // - wysypuje bo nie ma transakcji
+        assertNull(owner.getDog()); // proxy wysypuje bo nie ma transakcji
     }
 
     @Test

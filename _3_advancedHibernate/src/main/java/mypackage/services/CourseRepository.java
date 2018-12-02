@@ -44,7 +44,8 @@ public class CourseRepository {
     public void flush() {
         Course c = Course.builder().name("ASD").build();
         entityManager.persist(c);
-        entityManager.flush(); // od razu do bazy, bez kesza
+        entityManager.flush(); // od razu do bazy, bez kesza,
+//        nie czeka na koniec transakcji. jesli wyjatek - i tak jest w bazie
         c.setName("SDADSASD");
     }
 
