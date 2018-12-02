@@ -20,7 +20,7 @@ import static junit.framework.TestCase.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostTest {
+public class PostAndOrderTest {
 
     @Autowired
     private EntityManager entityManager;
