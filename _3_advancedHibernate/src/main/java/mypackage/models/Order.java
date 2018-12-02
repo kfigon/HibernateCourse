@@ -25,5 +25,7 @@ public class Order {
 
     @OneToMany
     @JoinColumn(name = "order_id")
+//    w przypadku dwukierunkowych one to many
+//    mozna zrobic mappedBy, ale join tez dziala
     private List<OrderItem> items;
 }

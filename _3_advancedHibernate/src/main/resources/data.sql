@@ -29,3 +29,25 @@ insert into orderx(id, name) values(1, 'stuff');
 insert  into order_item(id, description, order_id) values (1, 'some things', 1);
 insert  into order_item(id, description, order_id) values (2, 'other things', 1);
 insert  into order_item(id, description, order_id) values (3, 'stranger things', 1);
+
+
+-- many to many
+-- bez mappingu beda 2 join tablice
+-- robimy owning (np. book) i dajemy adnotacje a drugiej
+insert into book(id, name) values (1, 'java in practice');
+insert into book(id, name) values (2, 'JPA in practice');
+insert into book(id, name) values (3, 'boring book');
+
+insert into book_author(id, name) values (1, 'Joe');
+insert into book_author(id, name) values (2, 'Jane');
+insert into book_author(id, name) values (3, 'Bill');
+
+insert into book_book_authors(books_id, book_authors_id) values (1,1);
+insert into book_book_authors(books_id, book_authors_id) values (1,2);
+
+insert into book_book_authors(books_id, book_authors_id) values (2,2);
+insert into book_book_authors(books_id, book_authors_id) values (2,3);
+
+insert into book_book_authors(books_id, book_authors_id) values (3,1);
+insert into book_book_authors(books_id, book_authors_id) values (3,2);
+insert into book_book_authors(books_id, book_authors_id) values (3,3);
