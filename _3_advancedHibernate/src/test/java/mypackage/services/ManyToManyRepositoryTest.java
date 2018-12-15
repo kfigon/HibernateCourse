@@ -31,7 +31,7 @@ public class ManyToManyRepositoryTest {
 
         assertThat(authors, Matchers.containsInAnyOrder("Joe", "Jane"));
     }
-    
+
     @Test
     public void saveBoth() {
         Book book = new Book();
