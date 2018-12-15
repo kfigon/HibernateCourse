@@ -31,4 +31,15 @@ public class ManyToManyRepositoryTest {
 
         assertThat(authors, Matchers.containsInAnyOrder("Joe", "Jane"));
     }
+    
+    @Test
+    public void saveBoth() {
+        Book book = new Book();
+        book.setName("Asd");
+
+        BookAuthor bookAuthor = new BookAuthor();
+        bookAuthor.setName("Asdowski");
+
+        manyToManyRepository.persistBoth(book, bookAuthor);
+    }
 }

@@ -21,6 +21,7 @@ public class BookAuthor {
 
     private String name;
 
+    // definiuje wlasciciela relacji
     @ManyToMany(mappedBy = "bookAuthors")
     private List<Book> books;
 }
