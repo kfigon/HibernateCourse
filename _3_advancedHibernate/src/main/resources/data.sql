@@ -53,3 +53,9 @@ insert into book_book_authors(books_id, book_authors_id) values (2,3);
 insert into book_book_authors(books_id, book_authors_id) values (3,1);
 insert into book_book_authors(books_id, book_authors_id) values (3,2);
 insert into book_book_authors(books_id, book_authors_id) values (3,3);
+
+-- // dziedziczenie
+-- mappedSuperclass - baza nie jest encja, ale pola sie przenosza do dzieci
+-- join table - baza jest joinowana
+-- insert table - baza jest wsadzana do dzieci
+-- single table
