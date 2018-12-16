@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 
@@ -28,7 +29,11 @@ public class SpringDataStudentRepositoryTest {
         List<String> imiona = new LinkedList<>();
         allIt.forEach(student -> imiona.add(student.getName()));
 
-        assertThat(imiona, Matchers.containsInAnyOrder("Marek", "Adam"));
+        List<String> results = imiona.stream()
+                .filter(name -> "Marek".equals(name) || "Adam".equals(name))
+                .collect(Collectors.toList());
+
+        assertEquals(2, results.size());
     }
 
     @Test
