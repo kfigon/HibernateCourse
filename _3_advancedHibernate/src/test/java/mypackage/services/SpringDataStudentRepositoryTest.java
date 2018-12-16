@@ -37,7 +37,7 @@ public class SpringDataStudentRepositoryTest {
         assertTrue(student.isPresent());
         assertEquals("Adam", student.get().getName());
     }
-    
+
     @Test
     public void customoweQuery() {
         Optional<Student> marek = repository.findByName("Marek");
